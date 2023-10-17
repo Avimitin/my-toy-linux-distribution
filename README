@@ -1,0 +1,15 @@
+MY TOY LINUX DISTRIBUTION
+=========================
+
+Here is my toy linux distribution, with a "it works (TM)" pid 1 and a "it works (TM)" shell
+which have only repeating functionality.
+All of the kernel, pid1 and shell are built for riscv64gc platform and with ilp64d ABI support.
+
+If you know how to use nix, you can run ``nix develop`` and
+``qemu-system-riscv64 --nographic -machine virt -kernel $KERNEL_BIN_PATH -initrd $INITRD_PATH``
+to have a quick taste on this distribution.
+It will build the riscv-gnu-toolchain, so you should at least have 8G empty disk space for the toolchain.
+
+Thanks for popovicu's blog post for teaching me how to build the linux distro:
+
+  https://popovicu.com/posts/making-a-micro-linux-distro/
